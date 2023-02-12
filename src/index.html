@@ -11,6 +11,43 @@
 
 <body>
 
+  <svg class="gooey-filter" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1  0  0  0  0
+                0  1  0  0  0
+                0  0  1  0  0
+                0  0  0  18  -9" result="goo" />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+      </filter>
+    </defs>
+  </svg>
+
+  <div class="radial">
+    <button class="radial-button-center">
+      <img src="https://assets.codepen.io/907368/menu.svg" />
+    </button>
+
+    <div class="radial-background"></div>
+
+    <button class="radial-button radial-button-1">
+      <img src="https://assets.codepen.io/907368/contact.svg" />
+    </button>
+    <button class="radial-button radial-button-2">
+      <img src="https://assets.codepen.io/907368/person.svg" />
+    </button>
+    <button class="radial-button radial-button-3">
+      <img src="https://assets.codepen.io/907368/meteor_2.svg" />
+    </button>
+    <button class="radial-button radial-button-4">
+      <img src="https://assets.codepen.io/907368/half.svg" />
+    </button>
+    <button class="radial-button radial-button-5">
+      <img src="https://assets.codepen.io/907368/map.svg" />
+    </button>
+  </div>
+
   <script src="ts/index.ts"></script>
 </body>
 
